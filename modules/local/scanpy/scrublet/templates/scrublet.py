@@ -30,8 +30,17 @@ def format_yaml_like(data: dict, indent: int = 0) -> str:
             yaml_str += f"{spaces}{key}: {value}\\n"
     return yaml_str
 
-
 adata = sc.read_h5ad("${h5ad}")
+
+# Handle non-unique gene names
+if not adata.var_names.is_unique:
+    print("Warning: Found duplicate gene names. Making unique...")
+    adata.var_names_make_unique(join='-')
+
+# Add sample column if missing
+if 'sample' not in adata.obs.columns:
+    adata.obs['sample'] = "${meta.id}"
+
 prefix = "${prefix}"
 batch_col = "${batch_col}"
 
@@ -51,7 +60,6 @@ adata = adata[~adata.obs["predicted_doublet"]].copy()
 adata.write_h5ad(f"{prefix}.h5ad")
 
 # Versions
-
 versions = {
     "${task.process}": {
         "python": platform.python_version(),
