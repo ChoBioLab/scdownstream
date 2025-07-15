@@ -19,11 +19,11 @@ process SCANPY_NEIGHBORS {
     task.ext.when == null || task.ext.when
 
     script:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_neighbors"
     template('neighbors.py')
 
     stub:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_neighbors"
     """
     touch ${prefix}.h5ad
     touch versions.yml

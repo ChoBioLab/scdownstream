@@ -24,11 +24,11 @@ process SCANPY_LEIDEN {
     task.ext.when == null || task.ext.when
 
     script:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_leiden"
     template('leiden.py')
 
     stub:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_leiden"
     """
     touch "${prefix}.h5ad"
     touch "${prefix}.pkl"

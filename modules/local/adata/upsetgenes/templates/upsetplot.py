@@ -49,7 +49,7 @@ with open("versions.yml", "w") as f:
 prefix = "${prefix}"
 
 adata_genes = dict(zip(
-    "${names}".split(),
+    "${names.join(' ')}".split(),
     [sc.read_h5ad(path, backed='r').var.index.unique().to_list() for path in "${h5ads}".split()]
 ))
 

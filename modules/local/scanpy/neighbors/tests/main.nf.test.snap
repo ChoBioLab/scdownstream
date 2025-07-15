@@ -7,7 +7,7 @@
                         {
                             "id": "test"
                         },
-                        "test.h5ad:md5,d41d8cd98f00b204e9800998ecf8427e"
+                        "test_neighbors.h5ad:md5,d41d8cd98f00b204e9800998ecf8427e"
                     ]
                 ],
                 "1": [
@@ -18,7 +18,7 @@
                         {
                             "id": "test"
                         },
-                        "test.h5ad:md5,d41d8cd98f00b204e9800998ecf8427e"
+                        "test_neighbors.h5ad:md5,d41d8cd98f00b204e9800998ecf8427e"
                     ]
                 ],
                 "versions": [
@@ -27,10 +27,10 @@
             }
         ],
         "meta": {
-            "nf-test": "0.9.0",
-            "nextflow": "25.04.2"
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.3"
         },
-        "timestamp": "2025-06-02T10:34:28.42513358"
+        "timestamp": "2025-06-22T16:13:29.113156692"
     },
     "Should run without failures": {
         "content": [
@@ -40,7 +40,7 @@
                         {
                             "id": "test"
                         },
-                        "test.h5ad:md5,adf4b10b5a904d679a7b1e9b5eb5f4dd"
+                        "test_neighbors.h5ad:md5,810e753759c7162ddb465ef3130d5d7a"
                     ]
                 ],
                 "1": [
@@ -51,7 +51,7 @@
                         {
                             "id": "test"
                         },
-                        "test.h5ad:md5,adf4b10b5a904d679a7b1e9b5eb5f4dd"
+                        "test_neighbors.h5ad:md5,810e753759c7162ddb465ef3130d5d7a"
                     ]
                 ],
                 "versions": [
@@ -60,9 +60,9 @@
             }
         ],
         "meta": {
-            "nf-test": "0.9.0",
-            "nextflow": "25.04.2"
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.3"
         },
-        "timestamp": "2025-06-04T20:33:16.798967676"
+        "timestamp": "2025-06-22T16:13:22.56806176"
     }
 }

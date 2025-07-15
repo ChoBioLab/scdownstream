@@ -20,12 +20,12 @@ process ADATA_ENTROPY {
     path "versions.yml"                    , emit: versions
 
     script:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_entropy"
     plot_basis = task.ext.plot_basis ?: null
     template 'entropy.py'
 
     stub:
-    prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}_entropy"
     plot_basis = task.ext.plot_basis ?: null
     """
     touch ${prefix}.h5ad
