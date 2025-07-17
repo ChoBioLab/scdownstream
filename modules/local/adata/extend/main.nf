@@ -20,5 +20,12 @@ process ADATA_EXTEND {
 
     script:
     prefix = task.ext.prefix ?: "${meta.id}"
+    adata = base
+    obs_paths = obs.join(' ')
+    var_paths = var.join(' ')
+    obsm_paths = obsm.join(' ')
+    obsp_paths = obsp.join(' ')
+    uns_paths = uns.join(' ')
+    layers_paths = layers.join(' ')
     template('extend.py')
 }
